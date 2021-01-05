@@ -170,7 +170,7 @@ open class RingProgressLayer: CALayer {
         let r = min(bounds.width, bounds.height) / 2 - w / 2
         let c = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         let p = max(0.0, disableProgressAnimation ? progress : presentation()?.progress ?? 0.0)
-        let angleOffset = CGFloat.pi / 2
+        let angleOffset = CGFloat.pi * 202 / 180
         let angle = 2 * .pi * p - angleOffset
         let minAngle = 1.1 * atan(0.5 * w / r)
         let maxAngle = 2 * .pi - 3 * minAngle - angleOffset
